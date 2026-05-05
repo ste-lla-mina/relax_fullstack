@@ -1,4 +1,4 @@
-# Rock Paper Scissors (Full-Stack Python)
+# Rock Paper Scissors 
 
 A sleek, responsive Rock Paper Scissors game built with a **Python (Flask)** backend and a **Modern CSS** frontend.
 
