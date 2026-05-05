@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RPS Modern</title>
+    <style>
+        :root {
+            --primary: #6366f1;
+            --bg: #0f172a;
+            --card: #1e293b;
+            --text: #f8fafc;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: var(--bg);
+            color: var(--text);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            background: var(--card);
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+            text-align: center;
+            width: 90%;
+            max-width: 450px;
+        }
+
+        .score-board {
+            display: flex;
+            justify-content: space-around;
+            background: rgba(255,255,255,0.05);
+            padding: 15px;
+            border-radius: 12px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .result-box {
+            height: 60px;
+            margin: 20px 0;
+            font-size: 1.1rem;
+            color: #94a3b8;
+        }
+
+        .btn-group {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 10px;
+        }
+
+        button {
+            padding: 12px;
+            border: none;
+            border-radius: 8px;
+            background: var(--primary);
+            color: white;
+            font-weight: bold;
+            cursor: pointer;
+            transition: transform 0.2s, background 0.2s;
+        }
+
+        button:hover {
+            background: #4f46e5;
+            transform: translateY(-2px);
+        }
+
+        .reset-link {
+            display: inline-block;
+            margin-top: 30px;
+            color: #ef4444;
+            text-decoration: none;
+            font-size: 0.9rem;
+            opacity: 0.7;
+        }
+
+        .reset-link:hover { opacity: 1; }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h1>Relax</h1>
+    
+    <div class="score-board">
+        <div>Player: <span style="color: #4ade80;">{{ state.user_score }}</span></div>
+        <div>Computer: <span style="color: #f87171;">{{ state.computer_score }}</span></div>
+    </div>
+
+    <div class="result-box">
+        {{ state.last_result }}
+    </div>
+
+    <form method="POST" class="btn-group">
+        <button type="submit" name="choice" value="rock">Rock</button>
+        <button type="submit" name="choice" value="paper">Paper</button>
+        <button type="submit" name="choice" value="scissors">Scissors</button>
+    </form>
+
+    <a href="/reset" class="reset-link">Reset Game</a>
+</div>
+
+</body>
+</html>
