@@ -22,4 +22,4 @@ A sleek, responsive Rock Paper Scissors game built with a **Python (Flask)** bac
 ```
 4.Open your browser to http://127.0.0.1:5000
 
-Play when you fill exhausted or tired
+# 🚀Play any time you fill exhausted or tired !
